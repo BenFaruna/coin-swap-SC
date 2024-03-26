@@ -143,7 +143,7 @@ contract CoinSwap is ICoinSwap {
         }
 
         require(
-            tokenContractA.transferFrom(msg.sender, address(this), _amount),
+            tokenContractB.transfer(msg.sender, _swapAmount),
             "Token B transfer failed"
         );
 
